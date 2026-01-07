@@ -36,21 +36,6 @@ function App() {
         setRushName={setRushName}
       />
 
-      {/* Explication */}
-      <p className="text-amber-200 text-sm justify-center text-center pt-2">
-        {t("brief")}{" "}
-        <a
-          href="https://wow.kametotv.fr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-yellow-400"
-        >
-          wow.kametotv.fr
-        </a>
-        <br />
-        {t("detail")}
-      </p>
-
       {/* Dashboard grid */}
       <div className="dashboard-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 px-4">
         <div className="dashboard-panel">
@@ -93,9 +78,22 @@ function App() {
           </div>
         </div>
       </div>
+      {/* Explication */}
+      <p className="text-amber-200 text-sm justify-center text-center pt-2">
+        {t("brief")}{" "}
+        <a
+          href="https://wow.kametotv.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-yellow-400"
+        >
+          wow.kametotv.fr
+        </a>
+        <br />
+        {t("detail")}
+      </p>
 
-      {/* Footer aligné à droite */}
-      <div className="flex justify-center items-center gap-4 px-4">
+      <div className="flex justify-center items-center gap-4 px-4 pb-2">
         <span className="text-l font-bold text-amber-300">
           <a
             href="https://www.buymeacoffee.com/zandodev"
@@ -125,7 +123,7 @@ function App() {
             rel="noopener noreferrer"
             className="hover:text-yellow-400"
           >
-            📄 Sources & Documentations
+            📄 Sources & doc
           </a>
         </span>
       </div>

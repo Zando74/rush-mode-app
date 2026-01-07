@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* ===== TopBar ===== */
+
+  .topbar {
+    @apply sticky top-0 z-40 w-full
+      backdrop-blur-md
+      bg-gradient-to-b from-slate-900/90 to-slate-950/95
+      border-b border-amber-500/30
+      shadow-lg;
+  }
+
+  .topbar-container {
+    @apply flex flex-wrap items-center justify-between gap-3 px-4 py-2;
+  }
+
+  .topbar-title {
+    @apply flex items-center gap-3
+      font-semibold tracking-wide
+      text-sm sm:text-base md:text-lg
+      text-amber-300;
+  }
+
+  /* ===== Inputs ===== */
+
+  .select-wow {
+    @apply bg-slate-900
+      text-amber-200
+      border border-amber-500/30
+      rounded-md
+      px-3 py-1.5
+      text-sm
+      hover:border-amber-400
+      focus:outline-none
+      focus:ring-2 focus:ring-amber-500/40
+      transition
+      cursor-pointer;
+  }
+
+  /* ===== Icon Button ===== */
+
+  .icon-button {
+    @apply flex items-center justify-center
+      h-9 w-9
+      rounded-md
+      bg-slate-900
+      border border-amber-500/30
+      text-amber-300
+      hover:bg-slate-800
+      transition
+      cursor-pointer;
+  }
+
+  /* ===== Dropdown ===== */
+
+  .dropdown {
+    @apply absolute right-0 mt-2 w-36
+      rounded-md
+      bg-slate-900
+      border border-amber-500/30
+      shadow-xl
+      overflow-hidden;
+  }
+
+  .dropdown-item {
+    @apply w-full px-4 py-2 text-left
+      text-amber-200
+      hover:bg-amber-500/10
+      transition;
+  }
+
+  /* ===== Panels ===== */
+  .surface-scroll {
+    @apply bg-slate-900/90
+      border border-amber-500/20
+      rounded-md
+      flex flex-col;
+    height: 300px; /* hauteur fixe */
+  }
+
+  .surface-scroll-body {
+    @apply overflow-y-auto flex-1;
+  }
+
+  /* ===== Compact Tabs ===== */
+  .tabs-compact {
+    @apply flex gap-2 px-2 py-1
+      border-b border-amber-500/20
+      text-xs;
+  }
+
+  .tab-compact {
+    @apply px-2 py-1
+      text-amber-300/60
+      hover:text-amber-300
+      transition
+      cursor-pointer;
+  }
+
+  .tab-compact-active {
+    @apply text-amber-300
+      underline underline-offset-4;
+  }
+
+  /* ===== Table ===== */
+  .table-wow {
+    @apply w-full text-xs border-collapse;
+  }
+
+  .table-wow th {
+    @apply px-2 py-1
+      font-medium
+      text-amber-300/70
+      border-b border-amber-500/20
+      bg-slate-900/95
+      sticky top-0
+      z-10; /* pour rester au-dessus des lignes */
+  }
+
+  .table-wow td {
+    @apply px-2 py-1
+      text-slate-200
+      border-b border-slate-800;
+  }
+
+  /* ===== Alignment helpers ===== */
+  .cell-muted {
+    @apply text-slate-400;
+  }
+
+  .cell-level {
+    @apply text-amber-400 font-semibold;
+  }
+
+  /* ===== Column sizing & alignment ===== */
+  .col-char {
+    @apply w-[160px] text-left;
+  }
+  .col-player {
+    @apply w-[140px] text-left;
+  }
+  .col-class {
+    @apply w-[80px] text-center;
+  }
+  .col-lvl {
+    @apply w-[40px] text-center;
+  }
+  .col-gold {
+    @apply w-[80px] text-center;
+  }
+  .col-professions {
+    @apply w-[120px] text-left;
+  }
+  .col-items {
+    @apply min-w-[200px] text-left;
+  }
+
+  /* ===== Dead state ===== */
+  .row-dead {
+    @apply text-red-500/70;
+  }
+
+  /* ===== Items ===== */
+  .item-list {
+    @apply flex flex-wrap gap-1;
+  }
+  .item-chip {
+    @apply px-1.5 py-0.5
+      text-[10px]
+      rounded
+      bg-slate-800
+      text-slate-300;
+  }
+
+  /* ===== Professions ===== */
+  .profession-list {
+    @apply flex flex-wrap gap-1;
+  }
+  .profession-chip {
+    @apply px-1.5 py-0.5
+      text-[10px]
+      rounded
+      bg-slate-700
+      text-amber-300;
+  }
+  /* ===== App Container ===== */
+  .app-container {
+    @apply min-h-screen bg-slate-950 text-slate-100;
+  }
+
+  /* ===== Dashboard Grid ===== */
+  .dashboard-grid {
+    @apply grid gap-4 p-4
+      grid-cols-1
+      md:grid-cols-2;
+  }
+
+  .dashboard-title {
+    @apply text-amber-300 font-semibold text-sm md:text-base px-2 py-1 mb-2;
+    border-bottom: 1px solid rgba(255, 193, 7, 0.2);
+  }
+
+  .dashboard-panel {
+    @apply flex flex-col bg-slate-900/90 border border-amber-500/20 rounded-md p-2 shadow-lg;
+    height: 380px; /* hauteur fixe pour chaque panel */
+  }
+
+  /* ===== Scrollable Content ===== */
+  .dashboard-panel > * {
+    @apply flex-1 overflow-y-auto;
+  }
+
+  /* === Scrollbar globale pour panels et tableaux === */
+  .dashboard-content::-webkit-scrollbar {
+    width: 10px; /* largeur de la scrollbar verticale */
+    height: 10px; /* hauteur de la scrollbar horizontale si nécessaire */
+  }
+
+  .dashboard-content::-webkit-scrollbar-track {
+    background: #0b1020; /* fond de la piste */
+    border-radius: 8px;
+  }
+
+  .dashboard-content::-webkit-scrollbar-thumb {
+    background: #ffd23096; /* couleur principale (or/ambre) */
+    border-radius: 8px;
+    border: 2px solid #0b1020; /* espacement autour du thumb */
+  }
+
+  .dashboard-content::-webkit-scrollbar-thumb:hover {
+    background: #ffc53f9a; /* effet hover plus clair */
+  }
+
+  /* Pour Firefox */
+  .dashboard-content {
+    scrollbar-width: thin;
+    scrollbar-color: #ffd23086 #0b1020; /* thumb couleur / track couleur */
+  }
+
+  /* ===== Surface panels (réutilisable dans les composants) ===== */
+  .surface-scroll {
+    @apply bg-slate-900/90 border border-amber-500/20 rounded-md flex flex-col;
+  }
+
+  .surface-scroll-body {
+    @apply overflow-y-auto flex-1;
+  }
+
+  /* ===== Tabs ===== */
+  .tabs-compact {
+    @apply flex gap-2 px-2 py-1 text-xs;
+  }
+
+  .tab-compact {
+    @apply px-2 py-1 text-amber-300/60 hover:text-amber-300 transition cursor-pointer;
+  }
+
+  .tab-compact-active {
+    @apply text-amber-300 underline underline-offset-4;
+  }
+
+  /* ===== Table ===== */
+  .table-wow {
+    @apply w-full text-xs border-collapse;
+  }
+
+  .table-wow th {
+    @apply px-2 py-1 font-medium text-amber-300/70 border-b border-amber-500/20 bg-slate-900/95 sticky top-0 z-10;
+  }
+
+  .table-wow td {
+    @apply px-2 py-1 text-slate-200 border-b border-slate-800;
+  }
+
+  /* ===== Misc ===== */
+  .cell-muted {
+    @apply text-slate-400;
+  }
+  .cell-level {
+    @apply text-amber-400 font-semibold;
+  }
+  .row-dead {
+    @apply text-red-500/70;
+  }
+  .item-list {
+    @apply flex flex-wrap gap-1;
+  }
+  .item-chip {
+    @apply px-1.5 py-0.5 text-[10px] rounded bg-slate-800 text-slate-300;
+  }
+  .profession-list {
+    @apply flex flex-wrap gap-1;
+  }
+  .profession-chip {
+    @apply px-1.5 py-0.5 text-[10px] rounded bg-slate-700 text-amber-300;
+  }
+}

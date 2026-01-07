@@ -1,0 +1,28 @@
+export const EventTypeEnum = {
+  CharacterDeadEventType: "CharacterDeadEvent",
+  CharacterEarnGoldsEventType: "CharacterEarnGoldsEvent",
+  CharacterEquippedItemEventType: "CharacterEquippedItemEvent",
+  CharacterForgotProfessionEventType: "CharacterForgotProfessionEvent",
+  CharacterJoinedTheRushEventType: "CharacterJoinedTheRushEvent",
+  CharacterLearnedProfessionEventType: "CharacterLearnedProfessionEvent",
+  CharacterLeveledUpEventType: "CharacterLeveledUpEvent",
+  CharacterLostGoldsEventType: "CharacterLostGoldsEvent",
+  CharacterPlayerNameChangedEventType: "CharacterPlayerNameChangedEvent",
+  CharacterProfessionLeveledUpEventType: "CharacterProfessionLeveledUpEvent",
+  CharacterRemovedItemEventType: "CharacterRemovedItemEvent",
+  CharacterRenamedEventType: "CharacterRenamedEvent",
+  CharacterStatusUpdatedEventType: "CharacterStatusUpdatedEvent",
+  CharacterTeamChangedEventType: "CharacterTeamChangedEvent",
+  RushCharactersClosedEventType: "RushCharactersClosedEvent",
+  RushCharactersCreatedEventType: "RushCharactersCreatedEvent",
+  CharacterZoneChangedEventType: "CharacterZoneChangedEvent",
+
+  RushFraudClosedEventType: "RushFraudClosedEvent",
+  RushFraudCreatedEventType: "RushFraudCreatedEvent",
+  RushFraudMailRegisteredEventType: "RushFraudMailRegisteredEvent",
+  RushFraudTradeRegisteredEventType: "RushFraudTradeRegisteredEvent",
+
+  RushProgressionClosedEventType: "RushProgressionClosedEvent",
+  RushProgressionCreatedEventType: "RushProgressionCreatedEvent",
+  RushProgressionRegisteredEventType: "RushProgressionRegisteredEvent",
+};

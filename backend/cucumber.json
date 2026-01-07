@@ -1,0 +1,13 @@
+{
+  "default": {
+    "require": [
+      "src/test/shared/support/global-world.ts",
+      "src/test/**/support/hook.ts",
+      "src/test/**/bdd/step/**/*.ts"
+    ],
+    "paths": ["src/test/**/bdd/feature/**/*.feature"],
+    "requireModule": ["ts-node/register"],
+    "format": ["progress", "summary"],
+    "timeout": 30000
+  }
+}

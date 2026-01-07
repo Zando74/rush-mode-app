@@ -1,0 +1,10 @@
+node_modules
+build
+coverage
+.env
+redis_data
+postgres_data
+rabbitmq_data
+infrastructure
+rushModeTracker.exe
+*.exe

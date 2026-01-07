@@ -78,22 +78,8 @@ function App() {
           </div>
         </div>
       </div>
-      {/* Explication */}
-      <p className="text-amber-200 text-sm justify-center text-center pt-2">
-        {t("brief")}{" "}
-        <a
-          href="https://wow.kametotv.fr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-yellow-400"
-        >
-          wow.kametotv.fr
-        </a>
-        <br />
-        {t("detail")}
-      </p>
 
-      <div className="flex justify-center items-center gap-4 px-4 pb-2">
+      <div className="flex justify-center items-center gap-4 px-4">
         <span className="text-l font-bold text-amber-300">
           <a
             href="https://www.buymeacoffee.com/zandodev"
@@ -127,6 +113,20 @@ function App() {
           </a>
         </span>
       </div>
+      {/* Explication */}
+      <p className="text-amber-200 text-sm justify-center text-center pt-2">
+        {t("brief")}{" "}
+        <a
+          href="https://wow.kametotv.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-yellow-400"
+        >
+          wow.kametotv.fr
+        </a>
+        <br />
+        {t("detail")}
+      </p>
     </div>
   );
 }

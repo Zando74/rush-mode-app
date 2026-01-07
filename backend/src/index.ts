@@ -35,7 +35,9 @@ const main = async () => {
   await StartRushFraudApplication();
   await StartRushProgressionApplication();
   await StartGatewayApplication();
-  void fakeDemoApp();
+  if (process.env.ENABLE_DEMO === 'true') {
+    void fakeDemoApp();
+  }
 };
 
 void main();

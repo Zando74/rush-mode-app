@@ -50,4 +50,7 @@ export const CheckEnvVariables = () => {
   if (!process.env.CLIENT_API_KEY) {
     throw new Error('CLIENT_API_KEY is not set');
   }
+  if (process.env.ENABLE_DEMO === undefined) {
+    throw new Error('ENABLE_DEMO is not set');
+  }
 };

@@ -42,11 +42,11 @@ The application identifies and processes the following events for players:
 
 - **RushProgressionRegisteredEvent**: Triggered when a progression is registered.
 
-## 📞 **Support and Contact**
+## **Usage & Contact**
 
-For support and contact, feel free to reach out via the following platforms:
+The code for Rush Mode is public for reference, but the system is not free to use. If you want to organize your own event or set up this system, please contact me directly to discuss implementation and licensing.
 
 - **Twitter**: [@zandodev](https://twitter.com/zandodev)
 - **Buy Me a Coffee**: [Support Me](https://www.buymeacoffee.com/zandodev)
 
-Your feedback and support are crucial in enhancing the **Rush Mode App**. Thank you for being part of this journey!
+This ensures proper setup and support, and helps maintain fair play for all events using the system.

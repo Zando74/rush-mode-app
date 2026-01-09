@@ -12,6 +12,7 @@ import {
   CHARACTER_LEARN_PROFESSION_PROBABILITY,
   CHARACTER_LEVELUP_PROBABILITY,
   CHARACTER_LOST_GOLD_PROBABILITY,
+  CHARACTER_POSITION_CHANGE_PROBABILITY,
   CHARACTER_PROFESSION_LEVELUP_PROBABILITY,
   CHARACTER_REMOVED_ITEM_PROBABILITY,
   CHARACTER_RENAME_PROBABILITY,
@@ -96,6 +97,7 @@ export class FakeAddon {
             this.maybeCharacterRenamed(c);
             this.maybeCharacterTeamChanged(c);
             this.maybeCharacterZoneChanged(c);
+            this.maybeCharacterPositionChanged(c);
             this.maybeCharacterFraudMailRegistered(c);
             this.maybeCharacterFraudTradeRegistered(c);
             this.maybeCharacterKillBoss(c);
@@ -166,6 +168,8 @@ export class FakeAddon {
           nameSuffixes[Math.floor(Math.random() * nameSuffixes.length)],
         team: this.randomTeam(),
         mapId: MAP_IDS[Math.floor(Math.random() * MAP_IDS.length)],
+        x: Math.floor(Math.random() * 100),
+        y: Math.floor(Math.random() * 100),
         classId: CLASS_IDS[Math.floor(Math.random() * CLASS_IDS.length)],
         moneyInCopper: Math.floor(Math.random() * 100000),
         level: Math.floor(Math.random() * 10),
@@ -307,6 +311,14 @@ export class FakeAddon {
     if (Math.random() < CHARACTER_ZONE_CHANGE_PROBABILITY) {
       character.lastUpdate = Date.now();
       character.mapId = MAP_IDS[Math.floor(Math.random() * MAP_IDS.length)];
+    }
+  }
+
+  maybeCharacterPositionChanged(character: CharacterEntityProps) {
+    if (Math.random() < CHARACTER_POSITION_CHANGE_PROBABILITY) {
+      character.lastUpdate = Date.now();
+      character.x = Math.floor(Math.random() * 100);
+      character.y = Math.floor(Math.random() * 100);
     }
   }
 

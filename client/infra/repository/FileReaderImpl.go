@@ -101,6 +101,12 @@ func flattenTable(tbl *lua.LTable) ([]entity.Player, []entity.Progression, []ent
 					case "mapID":
 						rec.MapId = toInt(v)
 
+					case "x":
+						rec.X = toInt(v)
+
+					case "y":
+						rec.Y = toInt(v)
+
 					case "level":
 						rec.Level = toInt(v)
 

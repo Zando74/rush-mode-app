@@ -126,6 +126,7 @@
   "RushCharactersClosedEvent": "RushCharactersClosedEvent",
   "RushCharactersCreatedEvent": "RushCharactersCreatedEvent",
   "CharacterZoneChangedEvent": "Character zone changed",
+  "CharacterPositionChangedEvent": "Character position changed",
 
   "RushFraudClosedEvent": "RushFraudClosedEvent",
   "RushFraudCreatedEvent": "RushFraudCreatedEvent",

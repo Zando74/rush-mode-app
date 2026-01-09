@@ -120,6 +120,7 @@
   "CharacterTeamChangedEvent": "Le personnage a changé d'équipe",
   "RushCharactersClosedEvent": "RushCharactersClosedEvent",
   "RushCharactersCreatedEvent": "RushCharactersCreatedEvent",
+  "CharacterPositionChangedEvent": "Le personnage a changé de position",
 
   "RushFraudClosedEvent": "RushFraudClosedEvent",
   "RushFraudCreatedEvent": "RushFraudCreatedEvent",

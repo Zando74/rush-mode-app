@@ -12,6 +12,8 @@ type Player struct {
 	Team string `json:"team"`
 	ClassId int `json:"classId"`
 	MapId int `json:"mapId"`
+	X int `json:"x"`
+	Y int `json:"y"`
 	MoneyInCopper int `json:"moneyInCopper"`
 	Level int `json:"level"`
 	IsDead bool `json:"isDead"`

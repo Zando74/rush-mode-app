@@ -10,6 +10,8 @@ export type Character = {
   team: string;
   classId: number;
   mapId: number;
+  x: number;
+  y: number;
   moneyInCopper: number;
   level: number;
   isDead: boolean;

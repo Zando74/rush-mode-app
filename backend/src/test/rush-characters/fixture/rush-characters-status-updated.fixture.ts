@@ -12,6 +12,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Baldor',
       team: 'KTV',
       mapId: 1,
+      x: 1,
+      y: 1,
       classId: 4,
       moneyInCopper: 500, // Earned golds
       level: 5,
@@ -26,6 +28,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Alarin',
       team: 'JL',
       mapId: 10, // Changed zone
+      x: 10, // Changed position
+      y: 1,
       classId: 3,
       moneyInCopper: 240, // Lost golds
       level: 9, // Leveled up
@@ -41,6 +45,8 @@ export const updatedRushCharactersStatus: {
       team: 'JL', // Changed team
       classId: 5,
       mapId: 1,
+      x: 1,
+      y: 10, // Changed position
       moneyInCopper: 320,
       level: 3,
       isDead: false,
@@ -54,6 +60,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Ragnar',
       team: 'JL',
       mapId: 1,
+      x: 1,
+      y: 1,
       classId: 2,
       moneyInCopper: 780,
       level: 10,
@@ -68,6 +76,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Thorin',
       team: 'KTV',
       mapId: 1,
+      x: 1,
+      y: 1,
       classId: 1,
       moneyInCopper: 150,
       level: 4,
@@ -82,6 +92,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Eragon',
       team: 'JL',
       mapId: 1,
+      x: 1,
+      y: 1,
       classId: 4,
       moneyInCopper: 1000, // Earned golds
       level: 7, // Leveled up
@@ -96,6 +108,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Arwen',
       team: 'KTV',
       mapId: 1,
+      x: 1,
+      y: 1,
       classId: 3,
       moneyInCopper: 450,
       level: 7,
@@ -110,6 +124,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Gandalf',
       team: 'JL',
       mapId: 1,
+      x: 1,
+      y: 1,
       classId: 6,
       moneyInCopper: 890,
       level: 1,
@@ -124,6 +140,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Legolas',
       team: 'KTV',
       mapId: 1,
+      x: 1,
+      y: 1,
       classId: 2,
       moneyInCopper: 300,
       level: 10, // Leveled up
@@ -138,6 +156,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Gimli',
       team: 'JL',
       mapId: 1,
+      x: 1,
+      y: 1,
       classId: 7,
       moneyInCopper: 480,
       level: 2,
@@ -152,6 +172,8 @@ export const updatedRushCharactersStatus: {
       characterName: 'Frodo',
       team: 'KTV',
       mapId: 1,
+      x: 1,
+      y: 1,
       classId: 5,
       moneyInCopper: 200,
       level: 2,

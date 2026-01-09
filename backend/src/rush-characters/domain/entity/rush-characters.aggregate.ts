@@ -40,6 +40,10 @@ import {
   CharacterPlayerNameChangedEventType,
 } from '../event/character-player-name-changed.event';
 import {
+  CharacterPositionChangedEvent,
+  CharacterPositionChangedEventType,
+} from '../event/character-position-changed.event';
+import {
   CharacterProfessionLeveledUpEvent,
   CharacterProfessionLeveledUpEventType,
 } from '../event/character-profession-leveled-up.event';
@@ -147,6 +151,9 @@ export class RushCharactersAggregate extends BaseEsRootAggregate<RushCharactersS
     this.on(CharacterZoneChangedEventType, event =>
       this.onCharacterZoneChanged(event as CharacterZoneChangedEvent),
     );
+    this.on(CharacterPositionChangedEventType, event =>
+      this.onCharacterPositionChanged(event as CharacterPositionChangedEvent),
+    );
     this.on(RushCharactersClosedEventType, () => this.onRushCharactersClosed());
     this.on(RushCharactersOpenedEventType, () => this.onRushCharactersOpened());
   }
@@ -224,6 +231,17 @@ export class RushCharactersAggregate extends BaseEsRootAggregate<RushCharactersS
               new CharacterZoneChangedEvent(this.id, {
                 characterId: character.characterId,
                 newZone: character.mapId,
+              }),
+            );
+          }
+          if (
+            CharacterEntity.isPositionChanged(existingOldCharacter, character)
+          ) {
+            this.raise(
+              new CharacterPositionChangedEvent(this.id, {
+                characterId: character.characterId,
+                newX: character.x,
+                newY: character.y,
               }),
             );
           }
@@ -487,6 +505,16 @@ export class RushCharactersAggregate extends BaseEsRootAggregate<RushCharactersS
     this.characters = this.characters.map(c => {
       if (c.characterId === event.payload.characterId) {
         c.mapId = event.payload.newZone;
+      }
+      return c;
+    });
+  }
+
+  private onCharacterPositionChanged(event: CharacterPositionChangedEvent) {
+    this.characters = this.characters.map(c => {
+      if (c.characterId === event.payload.characterId) {
+        c.x = event.payload.newX;
+        c.y = event.payload.newY;
       }
       return c;
     });

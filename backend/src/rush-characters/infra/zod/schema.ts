@@ -14,6 +14,8 @@ const updateRushCharactersStatusSchema = z.object({
       characterName: z.string(),
       team: z.string(),
       mapId: z.number(),
+      x: z.number(),
+      y: z.number(),
       classId: z.number(),
       moneyInCopper: z.number(),
       level: z.number(),

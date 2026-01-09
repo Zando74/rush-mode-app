@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { maps } from "../../secondary/data/map";
+import ZoneWithCoords from "./zone-with-coords";
 
 type Props = {
   rushCharactersRepository: RushCharactersRepository;
@@ -103,7 +104,9 @@ export const TeamCharacters: React.FC<Props> = ({
                   {t("class-" + c.classId)}
                 </td>
                 <td className="col-lvl cell-level">{c.level}</td>
-                <td className="col-map cell-muted">{maps[c.mapId]}</td>
+                <td className="col-map cell-muted">
+                  <ZoneWithCoords mapName={maps[c.mapId]} x={c.x} y={c.y} />
+                </td>
                 <td className="col-gold cell-muted">
                   {(c.moneyInCopper / 10000).toFixed(1)}g
                 </td>

@@ -11,6 +11,8 @@ export interface CharacterEntityProps {
   characterName: string;
   team: string;
   mapId: number;
+  x: number;
+  y: number;
   classId: number;
   moneyInCopper: number;
   level: number;
@@ -26,6 +28,8 @@ export class CharacterEntity {
   characterName: string;
   team: string;
   mapId: number;
+  x: number;
+  y: number;
   classId: number;
   moneyInCopper: number;
   level: number;
@@ -41,6 +45,8 @@ export class CharacterEntity {
     this.characterName = props.characterName;
     this.team = props.team;
     this.mapId = props.mapId;
+    this.x = props.x;
+    this.y = props.y;
     this.classId = props.classId;
     this.moneyInCopper = props.moneyInCopper;
     this.level = props.level;
@@ -57,6 +63,8 @@ export class CharacterEntity {
       characterName: this.characterName,
       team: this.team,
       mapId: this.mapId,
+      x: this.x,
+      y: this.y,
       classId: this.classId,
       moneyInCopper: this.moneyInCopper,
       level: this.level,
@@ -88,6 +96,10 @@ export class CharacterEntity {
 
   static isZoneChanged(old: CharacterEntity, updated: CharacterEntity) {
     return old.mapId !== updated.mapId;
+  }
+
+  static isPositionChanged(old: CharacterEntity, updated: CharacterEntity) {
+    return old.x !== updated.x || old.y !== updated.y;
   }
 
   static isMoneyChanged(
@@ -184,6 +196,12 @@ export class CharacterEntity {
     }
     if (props.mapId === undefined) {
       throw new MissingFieldError('mapId is required');
+    }
+    if (props.x === undefined) {
+      throw new MissingFieldError('x is required');
+    }
+    if (props.y === undefined) {
+      throw new MissingFieldError('y is required');
     }
     if (props.classId === undefined) {
       throw new MissingFieldError('classId is required');
